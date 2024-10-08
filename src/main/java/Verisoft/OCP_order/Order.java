@@ -3,15 +3,17 @@ package Verisoft.OCP_order;
 public class Order {
 
     private double totalPrice;
-    public Order(double totalPrice) {
+    private DiscountStrategy discountStrategy;
+
+    public Order(double totalPrice, DiscountStrategy discountStrategy) {
         this.totalPrice = totalPrice;
-    }
-    // Apply a fixed discount
-    public double applyDiscount() {
-        double discount = 50; // Fixed discount of $50
-        return totalPrice - discount;
+        this.discountStrategy = discountStrategy;
     }
     public double getTotalPrice() {
         return totalPrice;
+    }
+
+    public double getFinalPrice() {
+        return discountStrategy.ApplyCount(totalPrice);
     }
 }
