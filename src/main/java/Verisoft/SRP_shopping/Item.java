@@ -1,4 +1,4 @@
-package Verisoft;
+package Verisoft.SRP_shopping;
 
 public class Item {
     private String name;

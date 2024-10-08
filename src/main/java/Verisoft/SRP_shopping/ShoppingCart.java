@@ -1,4 +1,4 @@
-package Verisoft;
+package Verisoft.SRP_shopping;
 
 import java.util.ArrayList;
 import java.util.List;
